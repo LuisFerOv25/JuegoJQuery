@@ -1,12 +1,3 @@
-html {
-  height: 100%;
-  background: url(images/fruitsBackground.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 h1,
 p {
   text-align: center;
@@ -14,52 +5,38 @@ p {
   color: black;
 }
 
-#container {
-  height: 600px;
-  width: 750px;
-  background-color: #9dd2ea;
+#contenedor {
+  height: 620px;
+  width: 950px;
+  background-color: #32acf6;
   margin: 10px auto;
   padding: 20px;
-  border-radius: 10px;
+  border: 2px solid #0b3264;
+  border-radius: 50px 20px;
   box-shadow: 0px 4px 0px 0px #009de4;
   -moz-box-shadow: 0px 4px 0px 0px #009de4;
   -webkit-box-shadow: 0px 4px 0px 0px #009de4;
   position: relative;
 }
 
-#score {
+#puntaje {
   background-color: #f1ff92;
-  color: #888e5f;
-  padding: 11px;
+  color: black;
+  padding: 6px;
   position: absolute;
-  left: 700px;
+  left: 28rem;
+  width: 90px;
   box-shadow: 0px 4px 0px #9da853;
   -moz-box-shadow: 0px 4px 0px #9da853;
   -webkit-box-shadow: 0px 4px 0px #9da853;
 }
 
-#correct {
-  position: absolute;
-  left: 260px;
-  background-color: #42e252;
-  color: white;
-  padding: 11px;
-  display: none;
-}
-
-#wrong {
-  position: absolute;
-  left: 250px;
-  background-color: #de401a;
-  color: white;
-  padding: 11px;
-  display: none;
-}
-
-#fruitsContainer {
-  width: 650px;
-  height: 400px;
-  margin: 50px auto 10px auto;
+#tablero {
+  width: 850px;
+  height: 500px;
+  margin: 25px auto;
+  border: 1px solid #ccc;
+  box-shadow: 7px 7px 15px #592a08;
   background-color: white;
   box-shadow: 0px 4px #535aa8;
   -moz-box-shadow: 0px 4px #535aa8;
@@ -72,35 +49,8 @@ p {
   overflow: hidden;
 }
 
-#instruction {
-  width: 450px;
-  height: 50px;
-  background-color: #b481d9;
-  margin: 10px auto;
-  text-align: center;
-  line-height: 45px;
-  box-shadow: 0px 4px #8153a8;
-  -moz-box-shadow: 0px 4px #8153a8;
-  -webkit-box-shadow: 0px 4px #8153a8;
-}
-
-#choices {
-  width: 450px;
-  height: 100px;
-  margin: 5px auto;
-}
-
-.box:hover,
-#startreset:hover {
-  /* background-color: #9C89F6;*/
-  /* color: white;*/
-  /* box-shadow: 0px 4px #6b54d3;*/
-  /* -moz-box-shadow: 0px 4px #6b54d3;*/
-  /* -webkit-box-shadow: 0px 4px #6b54d3;*/
-}
-
 .box:active,
-#startreset:active {
+#btninicio:active {
   background-color: #9c89f6;
   color: white;
   box-shadow: 0px 0px #6b54d3;
@@ -109,22 +59,8 @@ p {
   top: 4px;
 }
 
-#box4 {
-  margin-right: 0;
-}
-
-#startreset {
-  width: 78px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin: 0 auto;
-  border-radius: 3px;
+#btnInicio {
   cursor: pointer;
-  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  position: relative;
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -132,62 +68,74 @@ p {
   -ms-transition: all 0.2s;
 }
 
-#trialsLeft {
-  width: 80px;
-  padding: 10px;
+#campovida {
+  width: 120px;
   position: absolute;
-  background-color: #f1ff92;
+  left: 26rem;
+  background-color: #0ede76;
   border-radius: 3px;
   box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
-  /* visibility: hidden;*/
   display: none;
 }
 
-#gameOver {
-  height: 200px;
-  width: 500px;
-  background: linear-gradient(#f3ca6b, #f3706c);
-  background: -webkit-linear-gradient(#f3ca6b, #f3706c);
-  background: -o-linear-gradient(#f3ca6b, #f3706c);
-  background: -moz-linear-gradient(#f3ca6b, #f3706c);
-  color: white;
-  font-size: 2.5em;
-  text-align: center;
-  text-transform: uppercase;
-  position: absolute;
-  top: 170px;
-  left: 145px;
-  z-index: 2;
-  display: none;
-}
-
-.life {
-  width: 16px;
-  height: 16px;
+.vida {
+  width: 20px;
+  height: 20px;
   margin: 0 5px;
 }
 
-.fruit {
+.tamfrut_ver {
   display: none;
   position: absolute;
 }
 
-.btnIniciar {
+.Encabezado {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+.toggler {
+  width: 500px;
+  height: 200px;
+  position: relative;
+  display: flexbox;
+  display: none;
+}
+#button {
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+#effect {
+  width: 240px;
+  height: 210px;
+  padding: 0.4em;
+  position: relative;
+  background: #d9088a;
+}
+#effect h3 {
+  margin: 0;
+  padding: 0.4em;
   text-align: center;
 }
 
-.anotherNewClass {
-  text-indent: 40px;
-  letter-spacing: 0.2em;
-  width: 410px;
-  height: 100px;
-  padding: 30px;
-  margin: 10px;
-  font-size: 1.1em;
+#dialog {
+  background-color: orangered;
+  color: whitesmoke;
+  font-size: medium;
+  font-family: fantasy;
+}
+#draggable {
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+  display: none;
+  background-color: transparent;
+  border: none;
 }
 
-#equipo {
-  color: white;
+.tamañoes {
+  width: 150px;
+  height: 80px;
 }

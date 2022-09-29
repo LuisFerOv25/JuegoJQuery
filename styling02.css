@@ -1,0 +1,17 @@
+.btnIniciar {
+  text-align: center;
+}
+
+.anotherNewClass {
+  text-indent: 40px;
+  letter-spacing: 0.2em;
+  width: 410px;
+  height: 100px;
+  padding: 30px;
+  margin: 10px;
+  font-size: 1.1em;
+}
+
+#equipo {
+  color: white;
+}
