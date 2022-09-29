@@ -5,24 +5,21 @@
     <title>Fruits Game</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/funciones.js"></script>
+    <link rel="stylesheet" href="styling.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="styling.css">
+    <script src="js/jquery.js"></script>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    <style>
-        body {
-            background-image: url(img/fondo.jpg);
-            background-size: cover;
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+  <style>
+    body {
+        background-image: url(img/fondo.jpg);
+        background-size: cover;
 
-        }
-    </style>
+    }
+</style>
 </head>
 
 <body>
@@ -42,9 +39,6 @@
             </div>
         </div>
     </div>
-
-
-
     <div id="contenedor">
 
         <div id="campovida">
@@ -96,9 +90,15 @@
 
 
     </div>
-
-
-
+    <audio id="slicesound">
+        <source src="audio/slicefruit.mp3">
+        </source>
+        <source src="audio/slicefruit.ogg">
+        </source>
+    </audio>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/functions.js"></script>
 </body>
 
 </html>
